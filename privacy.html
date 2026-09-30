@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности — Design Bot</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --muted:#5a5a5a; --line:#e3e3e3; --link:#0b6b4f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141414; --fg:#ececec; --muted:#a0a0a0; --line:#2c2c2c; --link:#4fd1a5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:56px 16px 72px; }
+  h1 { font-size:30px; line-height:1.2; margin:0 0 6px; letter-spacing:-.02em; }
+  .date { color:var(--muted); margin:0 0 36px; font-size:14px; }
+  h2 { font-size:19px; margin:34px 0 10px; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  a { color:var(--link); }
+  .back { display:inline-block; margin-bottom:28px; }
+  footer { margin-top:40px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  .en { margin-top:48px; padding-top:24px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← Design Bot</a>
+  <h1>Политика конфиденциальности</h1>
+  <p class="date">Действует с 30 сентября 2026 года</p>
+
+  <p>Design Bot («приложение») — личный инструмент одного пользователя, который одновременно является его автором и владельцем всех данных, с которыми приложение работает. Приложение не предлагается третьим лицам и не собирает данные посторонних людей.</p>
+
+  <h2>1. Какие данные обрабатываются</h2>
+  <ul>
+    <li><b>Сообщения в Telegram</b> от владельца: текст задачи и приложенные к ней изображения.</li>
+    <li><b>Данные Google-аккаунта владельца</b>, полученные после его явного согласия: файлы и папки Google Диска и содержимое Google Таблиц, необходимые для выполнения задачи.</li>
+  </ul>
+  <p>Приложение не запрашивает и не обрабатывает данные других пользователей, платёжные данные и документы, удостоверяющие личность.</p>
+
+  <h2>2. Зачем нужен доступ к Google</h2>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/drive</code> — создать папку очередной задачи в рабочем разделе Диска владельца, переименовать её и отправить в корзину папку, вышедшую из оборота. Полные права нужны потому, что приложение работает и с папками, которые создал сам владелец, а не приложение.</li>
+    <li><code>https://www.googleapis.com/auth/spreadsheets</code> — прочитать структуру рабочей таблицы и записать в неё готовые тексты и локализации.</li>
+  </ul>
+
+  <h2>3. Ограниченное использование (Limited Use)</h2>
+  <p>Использование приложением данных, полученных через Google API, подчиняется <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, включая требования Limited Use. Данные Google используются исключительно для перечисленных выше действий в интересах самого владельца аккаунта. Они не передаются третьим лицам, не используются для рекламы, не продаются и не применяются для обучения моделей искусственного интеллекта.</p>
+
+  <h2>4. Хранение</h2>
+  <ul>
+    <li>Приложение работает на частном сервере, доступ к которому есть только у владельца.</li>
+    <li>Токен доступа к Google хранится в файле конфигурации на этом сервере и никуда не передаётся.</li>
+    <li>Изображения и служебные записи задач хранятся на сервере временно и автоматически удаляются (по умолчанию через 14 дней).</li>
+    <li>Файлы и папки остаются на Google Диске владельца и принадлежат ему; приложение не создаёт их копий за пределами его аккаунта.</li>
+  </ul>
+
+  <h2>5. Передача третьим лицам</h2>
+  <p>Данные Google не передаются никому. Текст задачи — без содержимого Google-файлов — отправляется в сервисы, которые приложение использует как инструменты: модель Anthropic Claude для подготовки формулировок и сервис генерации изображений. Эти сервисы обрабатывают полученный текст по собственным условиям и не получают доступа к Google-аккаунту владельца.</p>
+
+  <h2>6. Отзыв доступа и удаление</h2>
+  <p>Владелец может в любой момент отозвать доступ приложения на странице <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. После отзыва приложение теряет доступ к Диску и Таблицам немедленно. Для удаления временных данных с сервера достаточно написать на адрес ниже.</p>
+
+  <h2>7. Изменения</h2>
+  <p>Новая редакция политики публикуется на этой странице с обновлённой датой.</p>
+
+  <div class="en">
+    <h2>Privacy Policy (English)</h2>
+    <p>Design Bot is a personal, single-user application. Its only user is its author, who also owns the Google Drive folders and spreadsheet the app works with.</p>
+    <p><b>Data processed.</b> Telegram messages from the owner (task text and attached images) and, after the owner's explicit consent, the Google Drive files and Google Sheets content needed to carry out the task.</p>
+    <p><b>Scopes and why.</b> <code>drive</code> — create, rename and trash the task folders in the owner's working folder, including folders the owner created himself; <code>spreadsheets</code> — read the structure of the working spreadsheet and write finished texts and localizations into it.</p>
+    <p><b>Limited Use.</b> Design Bot's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used solely for the purposes listed above on behalf of the account owner. It is never sold, never used for advertising, never shared with third parties and never used to train AI models.</p>
+    <p><b>Storage.</b> The app runs on a private server accessible only to the owner. The Google refresh token is stored in a configuration file on that server. Images and task records are stored temporarily and deleted automatically (14 days by default). Files and folders stay in the owner's Google Drive.</p>
+    <p><b>Third parties.</b> Google data is not shared with anyone. Task text — without any Google file content — is sent to the tools the app uses: Anthropic's Claude model for drafting wording and an image-generation service. Neither has access to the owner's Google account.</p>
+    <p><b>Revoking access.</b> Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; the app loses access to Drive and Sheets immediately.</p>
+  </div>
+
+  <footer>
+    Вопросы: <a href="mailto:vds.ilya@gmail.com">vds.ilya@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
