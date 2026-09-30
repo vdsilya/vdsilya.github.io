@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Bot</title>
+<!-- СЮДА вставить строку подтверждения из Google Search Console:
+     <meta name="google-site-verification" content="..."> -->
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --muted:#5a5a5a; --line:#e3e3e3; --link:#0b6b4f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141414; --fg:#ececec; --muted:#a0a0a0; --line:#2c2c2c; --link:#4fd1a5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:56px 16px 72px; }
+  h1 { font-size:34px; line-height:1.2; margin:0 0 8px; letter-spacing:-.02em; }
+  .lead { color:var(--muted); margin:0 0 36px; }
+  h2 { font-size:20px; margin:36px 0 10px; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  a { color:var(--link); }
+  .nav { margin-top:40px; padding-top:20px; border-top:1px solid var(--line); }
+  .nav a { margin-right:18px; }
+  footer { margin-top:40px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  .en { margin-top:48px; padding-top:24px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Design Bot</h1>
+  <p class="lead">Личный Telegram-бот для рутины графического дизайнера: генерация изображений, подготовка SMM-материалов и ведение рабочих папок и таблиц.</p>
+
+  <h2>Что он делает</h2>
+  <ul>
+    <li>Принимает задачу в Telegram и готовит по ней промт для генератора изображений.</li>
+    <li>Создаёт рабочую папку очередной задачи на Google Диске владельца и удерживает принятую нумерацию папок.</li>
+    <li>Записывает готовые тексты и локализации в рабочую Google-таблицу владельца.</li>
+    <li>Возвращает результат в тот же чат Telegram.</li>
+  </ul>
+
+  <h2>Кто им пользуется</h2>
+  <p>Приложение не публичное: им пользуется один человек — его автор и владелец тех самых папок и таблиц. Регистрация не предусмотрена, доступ по Telegram-аккаунту.</p>
+
+  <h2>Доступ к Google</h2>
+  <p>Бот работает с Google Диском и Google Таблицами от имени владельца, который сам выдал ему доступ на экране согласия Google. Этот доступ можно в любой момент отозвать на странице <a href="https://myaccount.google.com/permissions">Доступ сторонних приложений</a> в аккаунте Google.</p>
+
+  <div class="nav">
+    <a href="./privacy.html">Политика конфиденциальности</a>
+    <a href="./terms.html">Условия использования</a>
+  </div>
+
+  <div class="en">
+    <h2>About (English)</h2>
+    <p>Design Bot is a personal Telegram bot that automates routine graphic-design work: drafting image-generation prompts, creating the working folder for each task on the owner's Google Drive, and writing finished texts and localizations into the owner's Google Sheet. It is a single-user application, used only by its author, who is also the owner of that Drive folder and spreadsheet. Access to Google is granted by the owner through Google's own consent screen and can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+    <p>See the <a href="./privacy.html">Privacy Policy</a> and <a href="./terms.html">Terms of Service</a>.</p>
+  </div>
+
+  <footer>
+    Контакт: <a href="mailto:vds.ilya@gmail.com">vds.ilya@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
